@@ -1,0 +1,42 @@
+<html>
+<script src="app.js"></script>
+<script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+<body>
+<div class="form">
+  <h1>Welcome Back!</h1>
+    <form action="/action_page.php">
+        <label for="idnum">ID Number:</label><br>
+        <input type="text" id="idnum" name="idnum" ><br>
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname" ><br>
+        <label for="mname">Middle name:</label><br>
+        <input type="text" id="mname" name="mname"><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname"><br>
+        <label for="bday">Birth Date:</label><br>
+        <input type="number" id="bday" name="bday"><br>
+        <label for="contnum">Contact Number:</label><br>
+        <input type="number" id="contnum" name="contnum"><br>
+        <label for="address">Address</label><br>
+        <input type="text" id="address" name="address"><br>
+        <label for="pos">Position</label>
+        <input type="text" id="pos" name="pos">
+        <label for="sss">SSS: </label><br>
+        <input type="number" id="sss" name="sss"><br>
+        <label for="phil">Philhealth: </label><br>
+        <input type="number" id="phil" name="phil"><br>
+        <label for="pagib">Pag Ibig: </label><br>
+        <input type="number" id="pagib" name="pagib"><br>
+        <label for="tin">TIN: </label><br>
+        <input type="number" id="tin" name="tin"><br>
+        <button type="button" onclick="generateQRCode(2)">
+            Generate QR Code
+        </button>
+    </form> 
+
+<div id="qrcode-container">
+    <div id="qrcode" class="qrcode"></div>
+</div>
+
+</body>
+</html>
