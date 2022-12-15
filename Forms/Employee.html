@@ -3,40 +3,37 @@
 <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
 <body>
 <div class="form">
-  <h1>Welcome Back!</h1>
-    <form action="/action_page.php">
-        <label for="idnum">ID Number:</label><br>
-        <input type="text" id="idnum" name="idnum" ><br>
-        <label for="fname">First name:</label><br>
-        <input type="text" id="fname" name="fname" ><br>
-        <label for="mname">Middle name:</label><br>
-        <input type="text" id="mname" name="mname"><br>
-        <label for="lname">Last name:</label><br>
-        <input type="text" id="lname" name="lname"><br>
-        <label for="bday">Birth Date:</label><br>
-        <input type="number" id="bday" name="bday"><br>
-        <label for="contnum">Contact Number:</label><br>
-        <input type="number" id="contnum" name="contnum"><br>
-        <label for="address">Address</label><br>
-        <input type="text" id="address" name="address"><br>
-        <label for="pos">Position</label>
-        <input type="text" id="pos" name="pos">
-        <label for="sss">SSS: </label><br>
-        <input type="number" id="sss" name="sss"><br>
-        <label for="phil">Philhealth: </label><br>
-        <input type="number" id="phil" name="phil"><br>
-        <label for="pagib">Pag Ibig: </label><br>
-        <input type="number" id="pagib" name="pagib"><br>
-        <label for="tin">TIN: </label><br>
-        <input type="number" id="tin" name="tin"><br>
-        <button type="button" onclick="generateQRCode(2)">
-            Generate QR Code
-        </button>
-    </form> 
+    <h1>Welcome Back!</h1>
+    <form action="URL" method="post">
+        <label for="firstName">First Name:</label><br>
+        <input type="text" id="firstName" name="firstName" required="required"><br><br>
 
-<div id="qrcode-container">
-    <div id="qrcode" class="qrcode"></div>
-</div>
+        <label for="lastName">Last Name:</label><br>
+        <input type="text" id="lastName" name="lastName" required="required"><br><br>
+
+        <label for="position">Position:</label><br>
+        <input type="text" id="position" name="position" required="required"><br><br>
+
+        <label for="address">Address:</label><br>
+        <input type="text" id="address" name="address" required="required"><br><br>
+
+        <label for="contactNum">Contact Number:</label><br>
+        <input type="text" id="contactNum" name="contactNum" required="required"><br><br>
+
+        <label for="sss">SSS:</label><br>
+        <input type="text" id="sss" name="sss" required="required"><br><br>
+
+        <label for="philHealth">PhilHealth:</label><br>
+        <input type="text" id="philHealth" name="philHealth" required="required"><br><br>
+
+        <label for="pagIbig">Pag-ibig:</label><br>
+        <input type="text" id="pagIbig" name="pagIbig" required="required"><br><br>
+
+        <label for="tin">Taxpayer Identification Number:</label><br>
+        <input type="text" id="tin" name="tin" required="required"><br><br>
+        <br><br>
+        <input type="submit" value="SAVE"> &nbsp;<input type="reset" value="CLEAR">
+    </form> 
 
 </body>
 </html>
