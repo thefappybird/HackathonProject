@@ -3,38 +3,37 @@
 <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
 <body>
 <div class="form">
-  <h1>Welcome Back!</h1>
-    <form action="/action_page.php">
-        <label for="idnum">ID Number:</label><br>
-        <input type="text" id="idnum" name="idnum" ><br>
-        <label for="fname">First name:</label><br>
-        <input type="text" id="fname" name="fname" ><br>
-        <label for="mname">Middle name:</label><br>
-        <input type="text" id="mname" name="mname"><br>
-        <label for="lname">Last name:</label><br>
-        <input type="text" id="lname" name="lname"><br>
-        <label for="bday">Birth Date:</label><br>
-        <input type="number" id="bday" name="bday"><br>
-        <label for="contnum">Contact Number:</label><br>
-        <input type="number" id="contnum" name="contnum"><br>
-        <label for="address">Address</label><br>
-        <input type="text" id="address" name="address"><br>
-        <label for="course" class="student">Course </label><br>
-        <input type="text" id="course" name="course"class="student"><br>
-        <label for="course" class="student">Year</label><br>
-        <input type="text" id="year" name="year"class="student"><br>
-        <label for="emer">Contact person in case of emergency</label><br>
-        <input type="text" id="emer" name="emer"><br>
-        <label for="emernum">Number in case of Emergency</label><br>
-        <input type="number" id="emernum" name="emernum"><br>
-        <button type="button" onclick="generateQRCode(1)">
-            Generate QR Code
-        </button>
-    </form> 
+    <h1>Welcome Back!</h1>
+    <form action="URL" method="post">
+      <label for="stid"></label>Student ID:</label><br>
+      <input type="number" id="stid" name="stid" required="required" ><br><br>
 
-  <div id="qrcode-container">
-    <div id="qrcode" class="qrcode"></div>
-  </div>
+      <label for="course"></label>Course:</label><br>
+      <input type="text" id="course" name="course" required="required" ><br><br>
+
+      <label for="year"></label>Year:</label><br>
+      <input type="number" id="year" name="year" required="required" ><br><br>
+
+      <label for="firstName">First Name:</label><br>
+      <input type="text" id="firstName" name="firstName" required="required"><br><br>
+
+      <label for="lastName">Last Name:</label><br>
+      <input type="text" id="lastName" name="lastName" required="required"><br><br>
+
+      <label for="birthday">Date of birth:</label><br>
+      <input type="date" id="birthday" name="birthday" required="required"><br><br>
+
+      <label for="address">Address:</label><br>
+      <input type="text" id="address" name="address" required="required"><br><br>
+
+      <label for="contactPerson">Contact Person:</label><br>
+      <input type="text" id="contactPerson" name="contactPerson" required="required"><br><br>
+
+      <label for="contactNum">Contact Number:</label><br>
+      <input type="number" id="contactNum" name="contactNum" required="required"><br><br>
+      <br><br>
+      <input type="submit" value="SAVE"> &nbsp;<input type="reset" value="CLEAR">
+    </form> 
 
 </body>
 </html>
