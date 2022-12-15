@@ -19,11 +19,11 @@ var info = {
 function generateQRCode(x) {
       let website ="";
       if(x == 1){
-        website = "studqrcode.html";
+        website = "QR/studqrcode.html";
       }else if(x == 2){
-        website = "empqrcode.html";
+        website = "QR/empqrcode.html";
       }else{
-        website = "visqrcode.html";
+        website = "QR/visqrcode.html";
       }
       let qrcodeContainer = document.getElementById("qrcode");
       qrcodeContainer.innerHTML = "";
