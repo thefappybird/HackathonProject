@@ -1,0 +1,51 @@
+<html>
+<script src="app.js"></script>
+<script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+<style>
+  .student{
+    display: none;
+  }
+  .position{
+    display: none;
+  }
+</style>
+<body>
+<div class="form">
+  <h1>QR Code using qrcodejs</h1>
+    <form action="/action_page.php">
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname" ><br>
+        <label for="mname">Middle name:</label><br>
+        <input type="text" id="mname" name="mname"><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname"><br>
+        <label for="contnum">Contact Number:</label><br>
+        <input type="number" id="contnum" name="contnum"><br>
+        <label for="address">Address</label><br>
+        <input type="text" id="address" name="address"><br><br>
+        <label>Are you a: </label><br>
+        <input type="checkbox" name="Student" id="stud" onclick="studcheck()">Student<br>
+
+        <input type="checkbox" name="Employee"id="emp" onclick="empcheck()">Employee<br><br>
+
+        <label for="course" class="student">Course & Year</label>
+        <input type="text" id="course" name="course"class="student">
+
+        <label for="pos" class="position">Position</label>
+        <input type="text" id="pos" name="pos"class="position">
+        
+        <label for="emer">Contact person in case of emergency</label><br>
+        <input type="text" id="emer" name="emer"><br>
+        <label for="emernum">Number in case of Emergency</label><br>
+        <input type="number" id="emernum" name="emernum"><br>
+        <button type="button" onclick="generateQRCode()">
+            Generate QR Code
+        </button>
+    </form> 
+
+  <div id="qrcode-container">
+    <div id="qrcode" class="qrcode"></div>
+  </div>
+
+</body>
+</html>
