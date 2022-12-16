@@ -1,39 +1,155 @@
+<!DOCTYPE html>
 <html>
-<script src="../app.js"></script>
-<script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+<head>
+  <title>STUDENT FORM</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="../app.js"></script>
+  <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+
+</head>
+<style>
+	body{
+		overflow-x: hidden;
+	}
+	.main-content{
+		width: 50%;
+		height: 40%;
+		margin: 10px auto;
+		background-color: #fff;
+		border: 2px solid #e6e6e6;
+		padding: 40px 50px;
+	}
+	.header{
+		border: 0px solid #000;
+		margin-bottom: 5px;
+	}
+	.well{
+		background-color: #187FAB;
+	}
+	#signup{
+		width: 60%;
+		border-radius: 30px;
+	}
+
+</style>
 <body>
-<div class="form">
-    <h1>Welcome Back!</h1>
-    <form action="URL" method="post">
-      <label for="stid"></label>Student ID:</label><br>
-      <input type="number" id="stid" name="stid" required="required" ><br><br>
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="well">
+        <center><h1 style="color: white;">Student Form</h1></center>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="main-content">
+        <div class="header">
+          <h3 style="text-align: center;"><strong>Enter information</strong></h3>
+          <hr>
+        </div>
+        <div class="l-part">
+          
+            <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+              <input type="text" class="form-control" placeholder="Student ID Number" name="student_num" required="required">
+            </div><br>
+            <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+              <input type="text" class="form-control" placeholder="First Name" name="first_name" required="required">
+            </div><br>
+            <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+              <input type="text" class="form-control" placeholder="Last Name" name="last_name" required="required">
+            </div><br>
+            <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+              <input type="date" class="form-control input-md" placeholder="Email" name="u_birthday" required="required">
+            </div><br>
+            <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+              <input type="text" class="form-control" placeholder="Address" name="address" required="required">
+            </div><br>
+           
+            <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-education"></i></span>
+              <select class="form-control" name="course" required="required">
+                <option disabled>Select your Course</option>
+                <option>BS in Computer Science</option>
+                <option>BS in Information Technology</option>
+                <option>BS in Social Work</option>
+                <option>BS in Nursing</option>
+                <option>BS in Pharmacy</option>
+                <option>BS in Architecture</option>
+                <option>BS in Civil Engineering</option>
+                <option>BS in Electronics Engineering</option>
+                <option>BS in Electrical Engineering</option>
+                <option>BS in Geodetic Engineering</option>
+                <option>BS in Mechanical Engineering</option>
+                <option>BS in Management Accounting</option>
+                <option>BS in Accountancy</option>
+                <option>BS in Tourism Management</option>
+                <option>BS in Hospitality Management</option>
+                <option>BS in Entrepreneurship</option>
+                <option>BS in Psychology</option>
+                <option>BA in English Language</option>
+                <option>BA in Political Science</option>
+                <option>BA in Music</option>
+                <option>BA in Literature</option>
+              </select>
+            </div><br>
+            <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-chevron-down"></i></span>
+              <select class="form-control input-md" name="year" required="required">
+                <option disabled>Select your Year</option>
+                <option>First</option>
+                <option>Second</option>
+                <option>Third</option>
+                <option>Fourth</option>
+                <option>Fifth+</option>
+              </select>
+            </div><br>
+           
+            <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+              <input type="text" class="form-control" placeholder="Contact Person" name="contactperson" required="required">
+            </div><br>
+            <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
+              <input type="text" class="form-control" placeholder="Emergency Contact Number" name="contactnumber" required="required">
+            </div><br>
+            
+  
+            <center><button class="btn btn-lg btn-success"  data-target="#basicModal" data-toggle="modal">Submit and Generate QR CODE</button></center>
+    
+     
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title" id="myModalLabel">Basic Modal</h4>
+        </div>
+        <div class="modal-body">
+          <h3>Modal Body</h3>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
-      <label for="course"></label>Course:</label><br>
-      <input type="text" id="course" name="course" required="required" ><br><br>
-
-      <label for="year"></label>Year:</label><br>
-      <input type="number" id="year" name="year" required="required" ><br><br>
-
-      <label for="firstName">First Name:</label><br>
-      <input type="text" id="firstName" name="firstName" required="required"><br><br>
-
-      <label for="lastName">Last Name:</label><br>
-      <input type="text" id="lastName" name="lastName" required="required"><br><br>
-
-      <label for="birthday">Date of birth:</label><br>
-      <input type="date" id="birthday" name="birthday" required="required"><br><br>
-
-      <label for="address">Address:</label><br>
-      <input type="text" id="address" name="address" required="required"><br><br>
-
-      <label for="contactPerson">Contact Person:</label><br>
-      <input type="text" id="contactPerson" name="contactPerson" required="required"><br><br>
-
-      <label for="contactNum">Contact Number:</label><br>
-      <input type="number" id="contactNum" name="contactNum" required="required"><br><br>
-      <br><br>
-      <input type="submit" value="SAVE"> &nbsp;<input type="reset" value="CLEAR">
-    </form> 
+  
 
 </body>
 </html>
